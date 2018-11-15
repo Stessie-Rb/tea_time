@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<body>
+	<div id="page">
+		<!--logo-->
+		<div id="logo">
+			<a href="index.html">
+			<img src="images-tea-time/logo.PNG" alt="Tea-Time" /></a>
+		</div>
+
+	<!--header-->	
+		<header id="bandeau">
+			<nav id="menuprincipal">
+				<ul>
+					<li><a href="index.html">Accueil </a></li>
+					<li><a href="produits.html">Produits </a></li>
+					<li><a href="#">Services </a></li>
+					<li><a href="blog.html">Blog  </a></li>
+					<li><a href="#">Liens</a></li>
+					<li><a href="contact.html" class="choix">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!--main = contenu principal de la page-->
+		<main id="contenu-formulaire">
+		<form action="envoyerform.php" method="post">
+		<fieldset id="coordonnees">
+			<legend>Vos coordonnées</legend>
+
+			<div class="colonne">
+
+			<p>
+				<input type="radio" name="civilite" id="Mme" value="Mme" ><label for="Mme" class="petit">Mme</label>
+				<input type="radio" name="civilite" id="M" value="M" checked ><label for="M">M</label>
+			</p>
+
+
+			<p>
+				<label for="nom">Votre nom</label><input type="text" name="Nom" id="nom" placeholder="tapez votre nom" >
+			</p>
+
+			<p>
+				<label for="prenom">Votre prenom</label><input type="text" name="prenom" id="prenom" placeholder="tapez votre prenom" >
+			</p>
+
+			<p>
+				<label for="adresse">Votre adresse</label><textarea name="adresse" id="adresse" placeholder="tapez votre adresse"></textarea>
+			</p>
+
+			</div>
+
+			<div class="colonne">
+			<!--liste deroulante-->
+			<p>
+				<label for="pays">Votre pays</label>
+				<select name="pays" id="pays">
+				<option value="France">France</option>
+				<option value="Canada" selected>Canada</option>
+				<option value="Japon">Japon</option>
+				</select>
+			</p>
+
+			<p>
+				<label for="telephone">Mobile</label>
+				<input type="telephone" name="telephone" id="telephone">
+			</p>
+
+			<p>
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email" placeholder="Tapez votre adresse email">
+			</p>
+				
+			<p>	
+				<label for="naissance">Naissance</label>
+				<input type="date" name="naissance" id="naissance" placeholder="Tapez votre date de naissance">
+			</p>
+			</div>	
+		</fieldset>	
+
+		<fieldset>
+			<!--ajouter une longueur max pour le champ de texte: utiliser maxlength=""-->
+			<legend>Votre message</legend>
+			<!--cases à cocher: autant de choix que je veux-->
+			<p>Vous préférez: <input type="checkbox" name="preference" id="the_vert" value="thé vert"><label for="the_vert" class="petit">Thé vert</label>
+			<input type="checkbox" name="preference" id="the_noir" value="thé noir"><label for="the_noir" class="petit">Thé noir</label>
+			<input type="checkbox" name="preference" id="tout" value="tout"><label for="tout">Tout</label>
+			</p>
+			<p><label for="message">Votre message</label><textarea rows="8" name="message" id="message" placeholder="tapez votre message"></textarea></p>
+			
+		</fieldset>
+		<p class="bouton"><input type="submit" value="Envoyer" />
+			<input type="reset" value="Annuler" />
+		</p>
+
+		</form>
+		<div id="noustrouver">
+
+		<div id="carte">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2687.92019702416!2d-2.7741549989760115!3d47.6471175926416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48101c1e45bf9d89%3A0xf1b4ec0fcc4d768d!2s20+Rue+Winston+Churchill%2C+56000+Vannes!5e0!3m2!1sfr!2sfr!4v1539947363728" width="400" height="250" allowfullscreen></iframe>
+
+		</div>
+
+		<div id="notreadresse">
+			<address>
+				Teatime<br />
+				20 rue Winston Churchill<br />
+				56000 Vannes
+			</address>	
+		</div>
+
+		</div>	
+		</main>	
+
+
+	<!--footer-->
+		<footer id="piedpage">
+
+			<div id="infosbas">
+				<ul>
+					<li><a href="#">Nos news</a></li>
+					<li><a href="#">Galerie photos</a></li>
+					<li><a href="#">Nos partenaires</a></li>
+					<li><a href="#">Evènements</a></li>
+					<li><a href="#">Le thé et la santé</a></li>
+					<li><a href="#">Hisoire de thés</a></li>
+					<li><a href="#">Boutique</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">FaQs</a></li>
+				</ul>
+			</div>
+			<aside id="bas">
+				<ul>
+					<li><a href="#"><img src="images-tea-time/facebook.PNG" alt="Rejoignez-nous sur Facebook"><br>Facebook</a></li>
+					<li><a href="#"><img src="images-tea-time/twitter.PNG" alt="Suivez-nous sur Twitter"><br>Twitter</a></li>
+					<li><a href="#"><img src="images-tea-time/googleplus.PNG" alt="Retrouvez-nous sur Google plus"><br>Google plus</a></li>
+				</ul>
+			</aside>	
+		</footer>
+		<hr size="2" color="white" />
+		<p id="copyright">Teatime &copy 2018</p> 
+	</div>
+</body>
+</html>

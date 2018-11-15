@@ -1,0 +1,513 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+body{
+	/*background-color: white;*/
+	background-color: #eb891c;
+}
+#page{
+	max-width: 1170px;
+	width: 100%;
+	margin: 0 auto;
+	/*background-color: #eb891c;*/
+}
+#logo{
+	/*padding: 0 458px;*/
+	width: 100%;
+	text-align: center;
+}
+#bandeau{
+	background-color: red;
+	min-height: 32px;
+	line-height: 32px;
+	display: flex;
+	justify-content: center;
+	padding: 0 2%;
+
+}
+#bandeau #menuprincipal ul{
+	display: flex;
+	/*flex-direction: row;*/
+	justify-content: center;
+	min-height: 40px;
+	line-height: 40px;
+}
+#bandeau #menuprincipal ul li a{
+	box-sizing: border-box;
+	color: white;
+    border-right: 2px solid white;
+    padding: 1px 20px;
+    font-weight: bold;
+}
+#bandeau #menuprincipal .sousmenu{
+	display: none;
+}
+#menuprincipal input[type=checkbox]{
+	display: none;
+}
+#bandeau #menuprincipal .menu-mobile{
+	display: none;
+}
+#bandeau #menuprincipal ul li{
+	position: relative;
+}
+
+/*affichage du menu lors du clic sur le bouton menu*/
+#bandeau #menuprincipal input[type=checkbox]:checked ~ ul{
+	display: block;
+}
+#bandeau #menuprincipal ul li:hover .sousmenu{
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 10000;
+	background-color: red;
+}
+#bandeau #menuprincipal ul li .sousmenu li{
+	width: 150px;
+}
+#bandeau #menuprincipal ul li .sousmenu li a{
+	text-align: left;
+	display: block;
+	border: none;
+	padding: 1px 10px;
+}
+/*#bandeau #menuprincipal ul li a:last-child ou nth-child{
+	border none;
+*/	
+#bandeau #menuprincipal ul li a:hover,
+#bandeau #menuprincipal ul li a.choix{
+	color: #f0bf31;
+}
+#slider{
+	margin-bottom: 0px;
+}
+#slider img{
+	width: 100%;
+	color: white;
+}
+#sousslider{
+	background-color: white;
+	display: flex;
+	flex-direction: row;
+}
+#sousslider img{
+	height: 100%;
+}
+#sousslider p{
+	font-size: 20px;
+	color: black;
+	padding-top: 10px;
+	width: 50%;
+}
+#promo{
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 15px;
+	width: 100%;
+}
+#promo .blocpub{
+	box-sizing: border-box;
+	background-color: #fffcd5;
+	display: flex;
+	flex-direction: column;
+	align-items: center; 
+	width:24%;
+	height: 24%;
+	/*taille en px par exemple 270 px on fait  270/1170 coller le resultat de la calculatrice*/
+}
+#promo .blocpub img{
+	width: 100%;
+	height: 100%;
+}
+#promo h3{
+	min-height: 30px;
+	line-height: 30px;
+}
+#promo .green{
+	color: #8db80f;
+}
+#promo .blocpub p{
+	padding: 8px;
+	text-align: justify;
+	width: 90%;
+}
+#promo .blocpub a{
+	background-color: #ff4f2b;
+	margin-bottom: 25px;
+	padding: 2% 3%;
+	color: white;
+}
+#collection{
+	background-color: white;
+	display: flex;
+}
+#collection #cotegauche, 
+#collection #cotedroit{
+	display: flex;
+	/*width: 100%;*/
+}
+#collection #cotegauche p, 
+#collection #cotedroit p{
+	padding-top: 20px;
+	padding-left: 15px;
+	font-style: italic;
+	font-size: 20px;
+	color: #d9d7ce;
+}
+#collection #cotegauche a, 
+#collection #cotedroit a{
+	margin-top: 35px;
+	margin-right: 15px;
+	margin-left: 250px;
+}
+#piedpage{
+	padding-top: 10px;
+	padding-bottom: 20px;
+	display: flex;
+}
+#piedpage #infosbas{
+	column-count: 3;
+	margin: 10px;
+	width: 70%;
+}
+#piedpage #infosbas ul li{
+	border-right: 2px solid white;
+	box-sizing: border-box;
+}
+#piedpage #infosbas ul li a{
+	color: white;
+	background-image: url(images-tea-time/footer-list.PNG);
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	background-position: left;
+}
+#piedpage #bas ul li a{
+	color: white;
+}
+#piedpage #bas ul li a img{
+	padding-right: 40px;
+	padding-left: 10px;
+}
+#piedpage #bas ul{
+	display: flex;
+	padding-top: 20px;
+}
+#piedpage p{
+	padding-top: 15px;
+	color: white;
+}
+#copyright{
+	color: white;
+	padding: 10px;
+}
+
+/*--------------page produits---------------------*/
+#produits{
+	display: flex;
+	align-content: space-around;
+	color: white;
+}
+#produits .lesthes{
+	width:50%;
+}
+#produits .lesthes img,
+#produits .lesthes h3,
+#produits .lesthes p{
+	box-sizing: border-box;
+	width: 100%;
+	padding: 2%;
+}
+#produits .lesthes figure{
+	display: flex;
+	align-content: row;
+	width: 100%;
+}
+#breadcrumbs{
+	display: flex;
+	color: white;
+	padding-top: 2%;
+}
+#breadcrumbs h2{
+	margin-left: 73%;
+}
+#breadcrumbs a{
+	padding-left: 1%;
+	color: white;
+}
+#breadcrumbs a:hover,
+#breadcrumbs .choix,
+#breadcrumbs h2{
+	font-weight: bold;
+	color: white;
+}
+/*--------------------blog-------------------------------*/
+#articlesblog{
+	margin: 2%;
+}
+#articlesblog .infos{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	font-size: 18px;
+}
+#articlesblog .infos h2{
+	width: 100%
+}
+#articlesblog .infos{
+	margin-bottom: 2%;
+}
+#articlesblog .infos p{
+	width: 60%;
+}
+#articlesblog .infos a{
+	box-sizing: border-box;
+	background-color: red;
+	height: 50px;
+	width: 120px;
+	color: white;
+	font-weight: bold;
+	border: 1px solid white;
+	border-radius: 15px;
+	text-align: center;
+	padding-top: 5px;
+}
+#articlesblog .infos a:hover{
+	color: yellow;
+}
+
+/*------------------page contact--------------------*/
+
+#contenu-formulaire{
+	width: 100%;
+}
+#contenu-formulaire fieldset{
+	box-sizing: border-box;
+	width: 100%;
+	border: 2px dashed white;
+	margin: 20px 2%;
+	padding: 20px 1%;
+}
+/* gérer hauteur en px et largeur en % pour s'adapter au responsive design*/
+#contenu-formulaire #coordonnees .colonne{
+	width: 50%;
+	float: left;
+}
+#contenu-formulaire fieldset legend{
+	color: white;
+	font-style: italic;
+	font-size: 16px;
+	font-weight: 200;
+}
+#contenu-formulaire fieldset p{
+	margin: 10px 0;
+}
+#contenu-formulaire p.bouton{
+	text-align: center;
+}
+#contenu-formulaire p label{
+	width: 130px;
+	display: inline-block;
+	vertical-align: top;
+}
+#contenu-formulaire p label.petit{
+	width: 70px;
+}
+#contenu-formlaire p textarea#message{
+	width: 70%;
+}
+#contenu-formulaire p input[type=text]:hover,
+#contenu-formulaire p input[type=telephone]:hover,
+#contenu-formulaire p input[type=email]:hover,
+#contenu-formulaire p input[type=date]:hover,
+#contenu-formulaire p textarea:hover{
+	background-color: #ccc;
+}
+#contenu-formulaire p input[type=text]:focus,
+#contenu-formulaire p input[type=telephone]:focus,
+#contenu-formulaire p input[type=email]:focus,
+#contenu-formulaire p input[type=date]:focus,
+#contenu-formulaire p textarea:focus{
+	background-color: black;
+	color: white;
+}
+#contenu-formulaire p input[type=submit],
+#contenu-formulaire p input[type=reset]{
+	background-color: red;
+	color: white;
+	padding: 5px 2%;
+	font-weight: bold;
+	border: none;
+	border-radius: 15px;
+	margin: 0 10px;
+}
+#contenu-formulaire p input[type=submit]:hover,
+#contenu-formulaire p input[type=reset]:hover{
+	background-color: white;
+	color: red;
+}
+#noustrouver{
+	width: 100%;
+	border: 2px dashed white;
+	margin: 20px 2%;
+	padding: 20px 1%;
+	min-height: 250px;
+}
+#noustrouver #carte{
+	width:  60%;
+	float: left;
+}
+#noustrouver #carte iframe{
+	border: 2px solid grey;
+}
+#noustrouver #notreadresse{
+	color: white;
+	float: left;
+	min-height: 250px;
+}
+/*media querries contact-------------*/
+@media screen and (max-width:768px){
+	#contenu-formulaire #coordonnees .colonne{
+	width: 100%;
+	}
+	#contenu-formulaire p textarea#message{
+		width: 50%;
+	}
+	#menuprincipal ul{
+		display: none;
+	}
+	/*#contenu-formulaire p label{
+		width: 120px;
+		text-align: left;
+	}
+	#contenu-formulaire p textarea#adresse{
+		width: 50%;
+	}
+	#contenu-formulaire p label.petit{
+	width: 120px;
+	}
+	#noustrouver #carte iframe{
+		width: 100%;
+		height: 80%;
+	}
+	#noustrouver{
+		margin-right: 0;
+		padding-right: 0;
+		min-height: 150px;
+	}
+	#noustrouver #notreadresse{
+		width:25%;
+		min-height: 50px;
+		margin-left: 5%;
+	}*/
+}
+/*mediaqueries------------------------------------------*/
+
+/* écrans dont la tailles est située entre 769 et 992 pixels*/
+@media screen and (min-width:769px) and (max-width:992px){
+	/*body{
+		background-color: pink;
+	}*/
+	#promo{
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	#promo .blocpub{
+		width: 48%;
+		margin-bottom: 10px;
+	}
+	#sousslider{
+		flex-wrap: wrap;
+		min-height: 250px;
+	}
+	#sousslider img{
+		height: 50%;
+	}
+	#collection{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	#collection #cotegauche,
+	#collection #cotedroit{
+		width: 100%;
+		border-bottom: 5px solid orange;
+		min-height: 140px;
+	}
+	#bas{
+		display: none;
+	}
+	#infosbas{
+		display: none;
+	}
+}
+
+/* écrans dont la taille va jusqu'à 768px*/ 
+@media screen and (max-width:768px){
+	/*body{
+		background-color: yellow;
+	}*/
+	#bandeau{
+		border-top: 2px dotted white;
+		border-bottom: 2px dotted white;
+	}
+	#menuprincipal{
+		padding: 0;
+		margin: 10px;
+	}
+	#bandeau #menuprincipal ul{
+		flex-direction: column;
+		display: none;
+		/*line-height: 30px;
+		height: 30px;*/
+	}
+	#bandeau #menuprincipal .menu-mobile{
+		display: block;
+		color: #FFF;
+		background: red;
+		text-align: center;
+		padding: 12px 0;
+	}
+	#bandeau #menuprincipal ul li a{
+		border: none;
+	}
+	#menuprincipal ul li:hover{
+		background-color: orange;
+	}
+	#slider,
+	#sousslider{
+		display: none;
+	}
+	#promo{
+		flex-wrap: wrap;
+	}
+	#promo .blocpub{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	#collection{
+		display: none;
+	}
+	#infosbas{
+		display: none;
+	}
+	#piedpage #bas{
+		text-align: center;
+		width: 100%;
+	}
+	#piedpage #bas ul{
+		justify-content:  center;
+	}
+	#page p{
+		text-align: center;
+	}
+}
